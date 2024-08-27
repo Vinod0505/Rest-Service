@@ -1,7 +1,10 @@
-package com.hpe.restservice;
+package com.hpe.restservice.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import com.hpe.restservice.utility.EmployeeManager;
+import com.hpe.restservice.utility.Employees;
 
 @RestController("/")
 public class EmployeeController {

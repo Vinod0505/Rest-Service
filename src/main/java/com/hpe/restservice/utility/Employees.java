@@ -1,6 +1,8 @@
-package com.hpe.restservice;
+package com.hpe.restservice.utility;
 
 import java.util.List;
+
+import com.hpe.restservice.model.Employee;
 
 public class Employees {
 

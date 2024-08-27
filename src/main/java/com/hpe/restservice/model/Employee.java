@@ -1,4 +1,4 @@
-package com.hpe.restservice;
+package com.hpe.restservice.model;
 
 
 public class Employee {
