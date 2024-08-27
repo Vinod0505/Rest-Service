@@ -1,12 +1,16 @@
 package com.hpe.restservice.utility;
 
+import java.util.ArrayList;
 import java.util.List;
+
+import org.springframework.stereotype.Component;
 
 import com.hpe.restservice.model.Employee;
 
+@Component
 public class Employees {
 
-	private List<Employee> employeesList;
+	private List<Employee> employeesList = new ArrayList<Employee>();
 
 	public Employees() {
 		// TODO Auto-generated constructor stub

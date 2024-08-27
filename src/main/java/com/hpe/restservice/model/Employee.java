@@ -1,6 +1,5 @@
 package com.hpe.restservice.model;
 
-
 public class Employee {
 
 	private long employeeId;
@@ -9,10 +8,7 @@ public class Employee {
 	private String email;
 	private String title;
 	
-	public Employee() {
-		// TODO Auto-generated constructor stub
-	}
-
+	
 	public Employee(long employeeId, String firstName, String lastName, String email, String title) {
 		super();
 		this.employeeId = employeeId;
@@ -21,6 +17,7 @@ public class Employee {
 		this.email = email;
 		this.title = title;
 	}
+	
 	public long getEmployeeId() {
 		return employeeId;
 	}
