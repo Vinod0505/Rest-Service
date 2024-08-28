@@ -1,33 +1,35 @@
 package com.hpe.restservice.utility;
 
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
 import com.hpe.restservice.model.Employee;
 
-@Component
+@Repository
 public class EmployeeManager {
+  
+    private static Employees list = new Employees();
 
-	@Autowired
-	private Employees employees;
+    // Manually initialize service to contain some employees
+    static
+    {
+        Employee employee1 = new Employee("1", "First1", "Last1", "Email1", "Title1");
+        Employee employee2 = new Employee("2", "First2", "Last2", "Email2", "Title2");
+        Employee employee3 = new Employee("3", "First3", "Last3", "Email3", "Title3");
 
-	public EmployeeManager(Employees employees) {
-		this.employees=employees;
-		initializeEmployees();
-	}
-	private void initializeEmployees() {
-		employees.getEmployeesList().add(new Employee(1, "John", "Doe", "john.doe@example.com", "Developer"));
-		employees.getEmployeesList().add(new Employee(2, "Jane", "Smith", "jane.smith@example.com", "Manager"));
-		employees.getEmployeesList().add(new Employee(3, "Mike", "Johnson", "mike.johnson@example.com", "Designer"));
-	}
-
-	public Employees getEmployees() {
-		return employees;
-	}
-	
-	public void addEmployee(Employee employee) {
-		// TODO Auto-generated method stub
-		employees.getEmployeesList().add(employee);
-	}
+        list.getEmployeeList().add(employee1);
+        list.getEmployeeList().add(employee2);
+        list.getEmployeeList().add(employee3);
+    }
+  
+    public Employees getAllEmployees()
+    {
+        return list;
+    }
+  
+    public void addEmployee(Employee employee)
+    {
+        list.getEmployeeList().add(employee);
+    }
 }
+
