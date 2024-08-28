@@ -25,4 +25,9 @@ public class EmployeeManager {
 	public Employees getEmployees() {
 		return employees;
 	}
+	
+	public void addEmployee(Employee employee) {
+		// TODO Auto-generated method stub
+		employees.getEmployeesList().add(employee);
+	}
 }
